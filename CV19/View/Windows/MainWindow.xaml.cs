@@ -1,7 +1,7 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
 
 namespace CV19 {
-partial class MainWindow : Window {
+  public partial class MainWindow : MetroWindow {
     public MainWindow() {
       InitializeComponent();     
     }

@@ -13,4 +13,9 @@
     <Folder Include="Infrastructure\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.1.1" />
+    <PackageReference Include="MahApps.Metro.Resources" Version="0.6.1" />
+  </ItemGroup>
+
 </Project>
