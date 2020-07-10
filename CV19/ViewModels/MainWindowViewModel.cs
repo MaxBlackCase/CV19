@@ -55,6 +55,7 @@ namespace CV19.ViewModels {
     #region Команды
 
       CloseApplicationCommand = new LambdaCommand( OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute );
+
     #endregion
 
 
