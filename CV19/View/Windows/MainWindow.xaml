@@ -1,17 +1,42 @@
-﻿<mah:MetroWindow x:Class="CV19.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:CV19.ViewModels" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"  xmlns:local="clr-namespace:CV19" mc:Ignorable="d" Title="{Binding Title}" Height="450" Width="800">
+﻿<mah:MetroWindow x:Class="CV19.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:CV19.ViewModels" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" xmlns:local="clr-namespace:CV19" mc:Ignorable="d" Title="{Binding Title}" Height="450" Width="800">
   <mah:MetroWindow.DataContext>
     <vm:MainWindowViewModel />
   </mah:MetroWindow.DataContext>
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="auto" />
-      <RowDefinition Height="auto" />
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
+  <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="Файл">
+        <MenuItem Header="Выход" />
+      </MenuItem>
+      <MenuItem Header="Помощь">
+        <MenuItem Header="О программе" />
+      </MenuItem>
+    </Menu>
+    <StatusBar DockPanel.Dock="Bottom">
 
-
-  </Grid>
+      <StatusBarItem>
+        <TextBlock MinWidth="150" MaxWidth="300" Text="1243" FontSize="16"/>
+      </StatusBarItem>
+      <StatusBarItem>
+        <ProgressBar Width="120" Height="14" Value="30"/>
+      </StatusBarItem>
+      
+    </StatusBar>
+    <TabControl>
+      <TabItem Header="Вкладка 1">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>
+          <Rectangle Grid.Row="0" Grid.Column="0" Fill="Blue" StrokeThickness="3" Stroke="Red" RadiusX="5" RadiusY="7" Margin="5 7" Visibility="Hidden" />
+          <Ellipse Grid.Row="0" Grid.Column="1" Fill="Red" Stroke="Blue" StrokeThickness="2" Margin="5 7" Visibility="Hidden"/>
+        </Grid>
+      </TabItem>
+      <TabItem Header="Вкладка 2"></TabItem>
+    </TabControl>
+  </DockPanel>
 </mah:MetroWindow>
