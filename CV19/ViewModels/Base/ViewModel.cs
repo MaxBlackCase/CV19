@@ -13,6 +13,7 @@ namespace CV19.ViewModels.Base {
 
     }
 
+
     protected virtual bool Set<T>(ref T field, T value, [CallerMemberName] string PropertyName = null) {
 
       if ( Equals( field, value ) )
@@ -23,16 +24,17 @@ namespace CV19.ViewModels.Base {
 
     }
 
+
     public void Dispose() {
       Dispose( true );
     }
+
 
     public bool _Disposed;
 
     protected virtual void Dispose(bool Disposing ) {
       if ( !Disposing || _Disposed )
         return;
-
       _Disposed = true;
     }
 
