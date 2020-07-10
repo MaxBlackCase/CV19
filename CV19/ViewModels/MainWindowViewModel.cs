@@ -18,7 +18,7 @@ namespace CV19.ViewModels {
     }
     #endregion 
 
-    #region Status : string - Статус программы
+    #region Status : String - Статус программы
 
     private string _Status = "Готов!";
 
